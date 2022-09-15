@@ -15,14 +15,16 @@ public class BowlingGame {
         {
             int firstRoll = rolls[i];
             int secondRoll = rolls[i+1];
-            if (firstRoll>10 || firstRoll<0 || secondRoll>10 || secondRoll<0 ||
-                    (firstRoll == 10 && secondRoll !=0) ||
-                    (firstRoll + secondRoll >10 ) )
-            {
-                throw new IllegalArgumentException("Wrong rolls data. Please check game rules");
-            }
+
 
             if (i != 18) {
+                // Check rules
+                if (firstRoll>10 || firstRoll<0 || secondRoll>10 || secondRoll<0 ||
+                        (firstRoll == 10 && secondRoll !=0) ||
+                        (firstRoll + secondRoll >10 ) )
+                {
+                    throw new IllegalArgumentException("Wrong rolls data. Please check game rules");
+                }
                 // Normal Frame
                 if (firstRoll == 10) {
                     result[i / 2] = rolls[i] + ((rolls[i + 2] < 10 )? (rolls[i + 2] + rolls[i + 3]) : (rolls[i + 2] + rolls[i + 4]));
@@ -40,6 +42,14 @@ public class BowlingGame {
             }
             else {
                 // Last Frame
+                // Check rules
+                int thridRoll = rolls[i+2];
+
+                if (firstRoll>10 || firstRoll<0 || secondRoll>10 || secondRoll<0 || thridRoll>10 || thridRoll<0 ||
+                        (firstRoll<10 && (firstRoll +  secondRoll) > 10) )
+                {
+                    throw new IllegalArgumentException("Wrong rolls data. Please check game rules");
+                }
                     result[i / 2] = rolls[i] + rolls[i + 1] + rolls[i + 2] + result[(i / 2)-1];
                }
         }
