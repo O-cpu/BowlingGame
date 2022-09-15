@@ -2,7 +2,7 @@ package com.example.demo;
 
 public class BowlingGame {
 
-    public static int[] getResult(int[] rolls)
+    public static int[] getResult(int[] rolls) throws IllegalArgumentException
     {
 
         if (rolls.length!=21)
@@ -23,7 +23,7 @@ public class BowlingGame {
                         (firstRoll == 10 && secondRoll !=0) ||
                         (firstRoll + secondRoll >10 ) )
                 {
-                    throw new IllegalArgumentException("Wrong rolls data. Please check game rules");
+                    throw new IllegalArgumentException("Wrong rolls data. Please check the game rules");
                 }
                 // Normal Frame
                 if (firstRoll == 10) {

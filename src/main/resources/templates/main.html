@@ -8,8 +8,52 @@
 
 <body>
 
-<p>Hello My world!</p>
+<p>The Bowling Game</p>
 <p th:text="${name}"/>
+<form action="/" method="post"><table class="tg">
+<table border="1px">
+        <tbody>
+    <tr>
+        <td ><input size="5" type="text" name="0" th:value="${val0}"></td>
+        <td ><input size="5"  type="text" name="1" th:value="${val1}"></td>
+        <td ><input size="5"  type="text" name="2" th:value="${val2}"></td>
+        <td ><input size="5"  type="text" name="3" th:value="${val3}"></td>
+        <td ><input size="5"  type="text" name="4" th:value="${val4}"></td>
+        <td ><input size="5"  type="text" name="5" th:value="${val5}"></td>
+        <td ><input size="5"  type="text" name="6" th:value="${val6}"></td>
+        <td ><input size="5"  type="text" name="7" th:value="${val7}"></td>
+        <td ><input size="5"  type="text" name="8" th:value="${val8}"></td>
+        <td ><input size="5"  type="text" name="9" th:value="${val9}"></td>
+        <td ><input size="5"  type="text" name="10" th:value="${val10}"></td>
+        <td ><input size="5"  type="text" name="11" th:value="${val11}"></td>
+        <td ><input size="5"  type="text" name="12" th:value="${val12}"></td>
+        <td ><input size="5"  type="text" name="13" th:value="${val13}"></td>
+        <td ><input size="5"  type="text" name="14" th:value="${val14}"></td>
+        <td ><input size="5"  type="text" name="15" th:value="${val15}"></td>
+        <td ><input size="5"  type="text" name="16" th:value="${val16}"></td>
+        <td><input size="5"  type="text" name="17" th:value="${val17}"></td>
+        <td><input size="5"  type="text" name="18" th:value="${val18}"></td>
+        <td ><input size="5"  type="text" name="19" th:value="${val19}"></td>
+        <td ><input size="5"  type="text" name="20" th:value="${val20}"></td>
+    </tr>
+    <tr>
+        <td th:text="${res0}" colspan="2" ></td>
+        <td th:text="${res1}" colspan="2"></td>
+        <td th:text="${res2}" colspan="2"></td>
+        <td th:text="${res3}" colspan="2"></td>
+        <td th:text="${res4}" colspan="2"></td>
+        <td th:text="${res5}" colspan="2"></td>
+        <td th:text="${res6}" colspan="2"></td>
+        <td th:text="${res7}" colspan="2"></td>
+        <td th:text="${res8}" colspan="2"></td>
+        <td th:text="${res9}" colspan="3"></td>
+    </tr>
+    </tbody>
+</table>
+    <p style="color:red;" th:text="${message}"/>
+    <button type="submit">Send</button>
+</form>
+
 </body>
 
 </html>
