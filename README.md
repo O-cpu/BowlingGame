@@ -1,12 +1,12 @@
 # BowlingGame
 
-How to start the game?
+## How to start the game?
 
 Clone project from github:
-git clone https://github.com/O-cpu/BowlingGame.git
+`git clone https://github.com/O-cpu/BowlingGame.git`
 
 Run:
-./gradlew bootRun
+`./gradlew bootRun`
 
 Open website:
 http://localhost/
@@ -14,7 +14,7 @@ http://localhost/
 Result:
 ![Bowling game.](doc/BowlingGameScreen.png)
 
-Aufgabenbeschreibung
+## Aufgabenbeschreibung
 Bitte erstelle ein Programm, welches aus den Punktzahlen einzelner Würfe beim Bowling die
 Gesamtpunktzahl eines Spieles ermitteln kann.
 
